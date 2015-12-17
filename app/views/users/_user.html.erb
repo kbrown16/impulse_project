@@ -1,0 +1,44 @@
+<style>
+
+  username{
+    color: white !important;
+    font-size: 20px;
+    font-family: "Lucida Console";
+    text-shadow:
+       2px 2px 0 #006666,
+     -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+  }
+
+  fname{
+    color: white;
+    font-size: 20px;
+    font-family: "Arial";
+    text-shadow:
+       1px 1px 0 #006666,
+     -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+
+  }
+
+
+</style>
+
+
+<div class="user_list">
+  
+<li>
+  <%= gravatar_for user, size: 50 %>
+  <username><%= link_to user.username, user %></username>
+  <br/>
+  <fname><%= user.fname %></fname>
+  <% if current_user.admin? && !current_user?(user) %>
+    | <%= link_to "delete", user, method: :delete,
+                                  data: { confirm: "You sure?" } %>
+  <% end %>
+</li>
+</div>

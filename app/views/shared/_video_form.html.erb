@@ -1,0 +1,35 @@
+<style>
+
+  body{
+
+    background-image: url(/assets/stereo_equalizer.jpg);
+    background-position: center;
+    background-size: contain;
+    background-attachment: fixed;
+  }
+
+</style>
+
+
+<% provide(:title, 'Upload') %>
+<body>
+<%= form_for(@video) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+<div class="field">
+  <%= f.text_area :youtube_html, placeholder: "YouTube URL" %>
+  </div>
+<div class="field">
+    <%= f.text_area :vtitle, placeholder: "Song Name" %>
+  </div>
+<div class="field">
+    <%= f.text_area :vartist, placeholder: "Artist Name" %>
+  </div>
+<div class="field">
+  <%= f.text_area :vrecord, placeholder: "Record Company" %>
+  <div class="field">
+    <%= f.text_area :genre, placeholder: "Genre" %>
+  </div>
+  </div>
+  <%= f.submit "Post", class: "btn btn-primary" %>
+<% end %>
+</body>

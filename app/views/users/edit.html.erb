@@ -1,0 +1,110 @@
+<style>
+   body{
+  background-image: url(/assets/dark_wave.jpg);
+    background-position: center;
+    background-size: contain;
+    background-attachment: fixed;
+  }
+
+  .user_info{
+
+    padding: 25px;
+
+    background: rgba(102,102,102,0.84);
+background: -moz-linear-gradient(left, rgba(102,102,102,0.84) 0%, rgba(102,102,102,0.85) 0%, rgba(89,89,89,0.85) 12%, rgba(71,71,71,0.85) 18%, rgba(10,10,10,0.85) 33%, rgba(0,0,0,0.85) 46%, rgba(0,0,0,0.85) 58%, rgba(0,0,0,0.85) 72%, rgba(71,71,71,0.85) 85%, rgba(102,102,102,0.85) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(102,102,102,0.84)), color-stop(0%, rgba(102,102,102,0.85)), color-stop(12%, rgba(89,89,89,0.85)), color-stop(18%, rgba(71,71,71,0.85)), color-stop(33%, rgba(10,10,10,0.85)), color-stop(46%, rgba(0,0,0,0.85)), color-stop(58%, rgba(0,0,0,0.85)), color-stop(72%, rgba(0,0,0,0.85)), color-stop(85%, rgba(71,71,71,0.85)), color-stop(100%, rgba(102,102,102,0.85)));
+background: -webkit-linear-gradient(left, rgba(102,102,102,0.84) 0%, rgba(102,102,102,0.85) 0%, rgba(89,89,89,0.85) 12%, rgba(71,71,71,0.85) 18%, rgba(10,10,10,0.85) 33%, rgba(0,0,0,0.85) 46%, rgba(0,0,0,0.85) 58%, rgba(0,0,0,0.85) 72%, rgba(71,71,71,0.85) 85%, rgba(102,102,102,0.85) 100%);
+background: -o-linear-gradient(left, rgba(102,102,102,0.84) 0%, rgba(102,102,102,0.85) 0%, rgba(89,89,89,0.85) 12%, rgba(71,71,71,0.85) 18%, rgba(10,10,10,0.85) 33%, rgba(0,0,0,0.85) 46%, rgba(0,0,0,0.85) 58%, rgba(0,0,0,0.85) 72%, rgba(71,71,71,0.85) 85%, rgba(102,102,102,0.85) 100%);
+background: -ms-linear-gradient(left, rgba(102,102,102,0.84) 0%, rgba(102,102,102,0.85) 0%, rgba(89,89,89,0.85) 12%, rgba(71,71,71,0.85) 18%, rgba(10,10,10,0.85) 33%, rgba(0,0,0,0.85) 46%, rgba(0,0,0,0.85) 58%, rgba(0,0,0,0.85) 72%, rgba(71,71,71,0.85) 85%, rgba(102,102,102,0.85) 100%);
+background: linear-gradient(to right, rgba(102,102,102,0.84) 0%, rgba(102,102,102,0.85) 0%, rgba(89,89,89,0.85) 12%, rgba(71,71,71,0.85) 18%, rgba(10,10,10,0.85) 33%, rgba(0,0,0,0.85) 46%, rgba(0,0,0,0.85) 58%, rgba(0,0,0,0.85) 72%, rgba(71,71,71,0.85) 85%, rgba(102,102,102,0.85) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#666666', endColorstr='#666666', GradientType=1 );
+
+   -webkit-box-shadow: 2px 1px 4px 3px #d1f8fa;
+box-shadow: 2px 1px 4px 3px #d1f8fa;
+  }
+
+  h1{
+    font-family: "Lucida Console";
+    color: white;
+    text-shadow:
+       1px 1px 0 #006666,
+     -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+  }
+
+  this{
+    color: white;
+    font-size: 20px;
+    line-height: 1.5;
+    text-shadow:
+       1px 1px 0 #006666,
+     -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+  }
+
+  p{
+    color: white;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  hr {
+    color: white;
+  }
+
+  </style>
+
+
+<% provide(:title, 'Edit Profile') %>
+<body>
+<h1>Edit Your Profile Information</h1>
+<hr>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <section class="user_info">
+    <%= form_for(@user) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+
+    <this><b> First Name: </b></this>
+      <%= f.text_field :fname, class: 'form-control' %>
+
+    <this><b> Last Name: </b></this>
+      <%= f.text_field :lname, class: 'form-control' %>
+
+    <this><b> Username: </b></this>
+    <%= f.text_field :username, class: 'form-control' %>
+
+    <this><%= f.label :location %></this>
+      <%= f.text_field :location, class: 'form-control' %>
+
+  <this>  <%= f.label :bio %></this>
+      <%= f.text_field :bio, class: 'form-control' %>
+
+   <this> <%= f.label :interests %></this>
+    <%= f.text_field :interests, class: 'form-control' %>
+
+   <this>   <%= f.label :email %></this>
+      <%= f.email_field :email, class: 'form-control' %>
+
+    <this>  <%= f.label :password %></this>
+      <%= f.password_field :password, class: 'form-control' %>
+
+  <this>  <%= f.label :password_confirmation, "Password Confirmation" %></this>
+      <%= f.password_field :password_confirmation, class: 'form-control' %>
+
+
+      <%= f.submit "Save Changes", class: "btn btn-primary" %>
+    <% end %>
+
+    <div class="gravatar_edit">
+      <%= gravatar_for @user %>
+      <a href="http://gravatar.com/emails" target="_blank">Change Picture</a>
+    </div>
+    </section>
+      </div>
+</div>
+</body>

@@ -1,0 +1,24 @@
+<style>
+  userstat{
+    color: white;
+  }
+  
+  
+</style>
+
+
+<% @user ||= current_user %>
+<div class="stats">
+  <a href="<%= following_user_path(@user) %>">
+    <strong id="following" class="stats">
+      <%= @user.following.count %>
+    </strong>
+    <userstat> following </userstat>
+  </a>
+  <a href="<%= followers_user_path(@user) %>">
+    <strong id="followers" class="stats">
+      <%= @user.followers.count %>
+    </strong>
+    <userstat> followers </userstat>
+  </a>
+</div>

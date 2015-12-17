@@ -1,0 +1,177 @@
+<style>
+
+  body{
+
+    background-image: url(/assets/dark_wave.jpg);
+    background-position: center;
+    background-size: contain;
+    background-attachment: fixed;
+  }
+
+.user_info{
+
+ padding: 10px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+  line-height: 1.5;
+
+  width: 25%;
+  float: left;
+
+  background: rgba(102,102,102,0.84);
+background: -moz-linear-gradient(left, rgba(102,102,102,0.84) 0%, rgba(102,102,102,0.85) 0%, rgba(89,89,89,0.85) 12%, rgba(71,71,71,0.85) 18%, rgba(10,10,10,0.85) 33%, rgba(0,0,0,0.85) 46%, rgba(0,0,0,0.85) 58%, rgba(0,0,0,0.85) 72%, rgba(71,71,71,0.85) 85%, rgba(102,102,102,0.85) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(102,102,102,0.84)), color-stop(0%, rgba(102,102,102,0.85)), color-stop(12%, rgba(89,89,89,0.85)), color-stop(18%, rgba(71,71,71,0.85)), color-stop(33%, rgba(10,10,10,0.85)), color-stop(46%, rgba(0,0,0,0.85)), color-stop(58%, rgba(0,0,0,0.85)), color-stop(72%, rgba(0,0,0,0.85)), color-stop(85%, rgba(71,71,71,0.85)), color-stop(100%, rgba(102,102,102,0.85)));
+background: -webkit-linear-gradient(left, rgba(102,102,102,0.84) 0%, rgba(102,102,102,0.85) 0%, rgba(89,89,89,0.85) 12%, rgba(71,71,71,0.85) 18%, rgba(10,10,10,0.85) 33%, rgba(0,0,0,0.85) 46%, rgba(0,0,0,0.85) 58%, rgba(0,0,0,0.85) 72%, rgba(71,71,71,0.85) 85%, rgba(102,102,102,0.85) 100%);
+background: -o-linear-gradient(left, rgba(102,102,102,0.84) 0%, rgba(102,102,102,0.85) 0%, rgba(89,89,89,0.85) 12%, rgba(71,71,71,0.85) 18%, rgba(10,10,10,0.85) 33%, rgba(0,0,0,0.85) 46%, rgba(0,0,0,0.85) 58%, rgba(0,0,0,0.85) 72%, rgba(71,71,71,0.85) 85%, rgba(102,102,102,0.85) 100%);
+background: -ms-linear-gradient(left, rgba(102,102,102,0.84) 0%, rgba(102,102,102,0.85) 0%, rgba(89,89,89,0.85) 12%, rgba(71,71,71,0.85) 18%, rgba(10,10,10,0.85) 33%, rgba(0,0,0,0.85) 46%, rgba(0,0,0,0.85) 58%, rgba(0,0,0,0.85) 72%, rgba(71,71,71,0.85) 85%, rgba(102,102,102,0.85) 100%);
+background: linear-gradient(to right, rgba(102,102,102,0.84) 0%, rgba(102,102,102,0.85) 0%, rgba(89,89,89,0.85) 12%, rgba(71,71,71,0.85) 18%, rgba(10,10,10,0.85) 33%, rgba(0,0,0,0.85) 46%, rgba(0,0,0,0.85) 58%, rgba(0,0,0,0.85) 72%, rgba(71,71,71,0.85) 85%, rgba(102,102,102,0.85) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#666666', endColorstr='#666666', GradientType=1 );
+
+   -webkit-box-shadow: 2px 1px 4px 3px #d1f8fa;
+box-shadow: 2px 1px 4px 3px #d1f8fa;
+}
+
+  .video_info{
+
+ padding: 10px;
+  text-align:center;
+ float: right;
+ margin-right: 5%;
+
+background: rgba(166,166,166,1);
+background: -moz-linear-gradient(left, rgba(166,166,166,1) 0%, rgba(166,166,166,0.8) 0%, rgba(89,89,89,0.8) 12%, rgba(71,71,71,0.8) 18%, rgba(10,10,10,0.8) 33%, rgba(0,0,0,0.8) 46%, rgba(0,0,0,0.8) 58%, rgba(0,0,0,0.8) 72%, rgba(71,71,71,0.8) 85%, rgba(166,166,166,0.8) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(166,166,166,1)), color-stop(0%, rgba(166,166,166,0.8)), color-stop(12%, rgba(89,89,89,0.8)), color-stop(18%, rgba(71,71,71,0.8)), color-stop(33%, rgba(10,10,10,0.8)), color-stop(46%, rgba(0,0,0,0.8)), color-stop(58%, rgba(0,0,0,0.8)), color-stop(72%, rgba(0,0,0,0.8)), color-stop(85%, rgba(71,71,71,0.8)), color-stop(100%, rgba(166,166,166,0.8)));
+background: -webkit-linear-gradient(left, rgba(166,166,166,1) 0%, rgba(166,166,166,0.8) 0%, rgba(89,89,89,0.8) 12%, rgba(71,71,71,0.8) 18%, rgba(10,10,10,0.8) 33%, rgba(0,0,0,0.8) 46%, rgba(0,0,0,0.8) 58%, rgba(0,0,0,0.8) 72%, rgba(71,71,71,0.8) 85%, rgba(166,166,166,0.8) 100%);
+background: -o-linear-gradient(left, rgba(166,166,166,1) 0%, rgba(166,166,166,0.8) 0%, rgba(89,89,89,0.8) 12%, rgba(71,71,71,0.8) 18%, rgba(10,10,10,0.8) 33%, rgba(0,0,0,0.8) 46%, rgba(0,0,0,0.8) 58%, rgba(0,0,0,0.8) 72%, rgba(71,71,71,0.8) 85%, rgba(166,166,166,0.8) 100%);
+background: -ms-linear-gradient(left, rgba(166,166,166,1) 0%, rgba(166,166,166,0.8) 0%, rgba(89,89,89,0.8) 12%, rgba(71,71,71,0.8) 18%, rgba(10,10,10,0.8) 33%, rgba(0,0,0,0.8) 46%, rgba(0,0,0,0.8) 58%, rgba(0,0,0,0.8) 72%, rgba(71,71,71,0.8) 85%, rgba(166,166,166,0.8) 100%);
+background: linear-gradient(to right, rgba(166,166,166,1) 0%, rgba(166,166,166,0.8) 0%, rgba(89,89,89,0.8) 12%, rgba(71,71,71,0.8) 18%, rgba(10,10,10,0.8) 33%, rgba(0,0,0,0.8) 46%, rgba(0,0,0,0.8) 58%, rgba(0,0,0,0.8) 72%, rgba(71,71,71,0.8) 85%, rgba(166,166,166,0.8) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6a6a6', endColorstr='#a6a6a6', GradientType=1 );
+
+   -webkit-box-shadow: 2px 1px 4px 3px #d1f8fa;
+box-shadow: 2px 1px 4px 3px #d1f8fa;
+}
+
+
+  usernamehead{
+    color: white;
+    font-size: 22px;
+    text-shadow:
+       1px 1px 0 #006666,
+     -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+  }
+
+  username{
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 1.5;
+  }
+
+   this{
+    color: white;
+    font-family: "Lucida Console";
+    font-size: 20px;
+    text-shadow:
+       1px 1px 0 #006666,
+     -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+  }
+  p{
+    color: white;
+    font-size: 16px;
+    font-family: "Arial";
+  }
+
+  hr{
+    color: black;
+  }
+  .uservids{
+    float: right;
+    text-align:center;
+  }
+
+  videohead{
+     text-align: center !important;
+    color: white;
+    font-size: 26px;
+    text-shadow:
+       1px 1px 0 #006666,
+     -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+    line-height: 1.5;
+  }
+  textstuff{
+    color: white;
+    font-size: 14px;
+  }
+
+   .follow_info{
+
+  padding: 10px;
+  text-align: justify;
+  float: right;
+  margin-right: 2%;
+  width: 70%;
+
+
+    background: rgba(102,102,102,0.84);
+background: -moz-linear-gradient(left, rgba(102,102,102,0.84) 0%, rgba(102,102,102,0.85) 0%, rgba(89,89,89,0.85) 12%, rgba(71,71,71,0.85) 18%, rgba(10,10,10,0.85) 33%, rgba(0,0,0,0.85) 46%, rgba(0,0,0,0.85) 58%, rgba(0,0,0,0.85) 72%, rgba(71,71,71,0.85) 85%, rgba(102,102,102,0.85) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(102,102,102,0.84)), color-stop(0%, rgba(102,102,102,0.85)), color-stop(12%, rgba(89,89,89,0.85)), color-stop(18%, rgba(71,71,71,0.85)), color-stop(33%, rgba(10,10,10,0.85)), color-stop(46%, rgba(0,0,0,0.85)), color-stop(58%, rgba(0,0,0,0.85)), color-stop(72%, rgba(0,0,0,0.85)), color-stop(85%, rgba(71,71,71,0.85)), color-stop(100%, rgba(102,102,102,0.85)));
+background: -webkit-linear-gradient(left, rgba(102,102,102,0.84) 0%, rgba(102,102,102,0.85) 0%, rgba(89,89,89,0.85) 12%, rgba(71,71,71,0.85) 18%, rgba(10,10,10,0.85) 33%, rgba(0,0,0,0.85) 46%, rgba(0,0,0,0.85) 58%, rgba(0,0,0,0.85) 72%, rgba(71,71,71,0.85) 85%, rgba(102,102,102,0.85) 100%);
+background: -o-linear-gradient(left, rgba(102,102,102,0.84) 0%, rgba(102,102,102,0.85) 0%, rgba(89,89,89,0.85) 12%, rgba(71,71,71,0.85) 18%, rgba(10,10,10,0.85) 33%, rgba(0,0,0,0.85) 46%, rgba(0,0,0,0.85) 58%, rgba(0,0,0,0.85) 72%, rgba(71,71,71,0.85) 85%, rgba(102,102,102,0.85) 100%);
+background: -ms-linear-gradient(left, rgba(102,102,102,0.84) 0%, rgba(102,102,102,0.85) 0%, rgba(89,89,89,0.85) 12%, rgba(71,71,71,0.85) 18%, rgba(10,10,10,0.85) 33%, rgba(0,0,0,0.85) 46%, rgba(0,0,0,0.85) 58%, rgba(0,0,0,0.85) 72%, rgba(71,71,71,0.85) 85%, rgba(102,102,102,0.85) 100%);
+background: linear-gradient(to right, rgba(102,102,102,0.84) 0%, rgba(102,102,102,0.85) 0%, rgba(89,89,89,0.85) 12%, rgba(71,71,71,0.85) 18%, rgba(10,10,10,0.85) 33%, rgba(0,0,0,0.85) 46%, rgba(0,0,0,0.85) 58%, rgba(0,0,0,0.85) 72%, rgba(71,71,71,0.85) 85%, rgba(102,102,102,0.85) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#666666', endColorstr='#666666', GradientType=1 );
+
+  -webkit-box-shadow: 1px 1px 4px 3px #d1f8fa;
+box-shadow: 1px 1px 4px 3px #d1f8fa;
+  }
+
+
+</style>
+
+
+
+
+<% provide(:title, @title) %>
+<div class="row">
+
+    <section class="user_info">
+
+      <username><%= @user.username %></username>
+      <br/>
+      <textstuff>
+      <br/>
+        <span><b> Videos:</b> <%= @user.videos.count %></span> </textstuff>
+      <br/>
+    <section class="stats">
+      <br/>
+      <%= render 'shared/stats' %>
+      <% if @users.any? %>
+        <div class="user_avatars">
+          <br/>
+          <% @users.each do |user| %>
+            <%= link_to gravatar_for(user, size: 30), user %>
+          <% end %>
+        </div>
+      <% end %>
+    </section>
+      </section>
+
+  <section class="follow_info">
+    <videohead><%= @title %></videohead>
+    <% if @users.any? %>
+      <ul class="users follow">
+        <%= render @users %>
+      </ul>
+      <%= will_paginate %>
+    <% end %>
+  </section>
+</div>

@@ -1,0 +1,145 @@
+<style>
+
+  frontal{
+    font-family: "Lucida Console";
+    color: white;
+    font-size: 80px !important;
+    font-style: bold;
+    text-align: center;
+    margin-bottom: 45%;
+    vertical-align: 50%;
+    text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+  }
+
+  table{
+    width: 100%;
+  }
+
+   motto{
+      font-family: "Lucida Console";
+    color: white;
+    font-size: 38px !important;
+    font-style: bold;
+    margin-bottom: 45%;
+     line-height: 2.0;
+    text-align: center;
+    text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+   }
+
+  .user_info{
+    padding: 10px;
+
+  margin-left: 3%;
+  line-height: 1.5;
+
+
+  }
+
+  hr {
+    color: white;
+  }
+
+  p{
+    font-family: "Arial";
+    color: white;
+    font-size: 16px;
+text-align: center;
+  }
+
+.button_choices{
+  margin: auto 35% 15px 35%;
+  text-align: center;
+  padding: 20px;
+}
+
+  body{
+  background-image: url(/assets/dark_wave.jpg);
+  background-position: center;
+    background-size:contain;
+background-attachment: fixed;
+    margin-bottom: 22%;
+  }
+
+  .video_upload{
+    margin-left: 20%;
+     margin-right: 20%;
+    padding:10px;
+
+  background: rgba(102,102,102,0.84);
+background: -moz-linear-gradient(left, rgba(102,102,102,0.84) 0%, rgba(102,102,102,0.85) 0%, rgba(89,89,89,0.85) 12%, rgba(71,71,71,0.85) 18%, rgba(10,10,10,0.85) 33%, rgba(0,0,0,0.85) 46%, rgba(0,0,0,0.85) 58%, rgba(0,0,0,0.85) 72%, rgba(71,71,71,0.85) 85%, rgba(102,102,102,0.85) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(102,102,102,0.84)), color-stop(0%, rgba(102,102,102,0.85)), color-stop(12%, rgba(89,89,89,0.85)), color-stop(18%, rgba(71,71,71,0.85)), color-stop(33%, rgba(10,10,10,0.85)), color-stop(46%, rgba(0,0,0,0.85)), color-stop(58%, rgba(0,0,0,0.85)), color-stop(72%, rgba(0,0,0,0.85)), color-stop(85%, rgba(71,71,71,0.85)), color-stop(100%, rgba(102,102,102,0.85)));
+background: -webkit-linear-gradient(left, rgba(102,102,102,0.84) 0%, rgba(102,102,102,0.85) 0%, rgba(89,89,89,0.85) 12%, rgba(71,71,71,0.85) 18%, rgba(10,10,10,0.85) 33%, rgba(0,0,0,0.85) 46%, rgba(0,0,0,0.85) 58%, rgba(0,0,0,0.85) 72%, rgba(71,71,71,0.85) 85%, rgba(102,102,102,0.85) 100%);
+background: -o-linear-gradient(left, rgba(102,102,102,0.84) 0%, rgba(102,102,102,0.85) 0%, rgba(89,89,89,0.85) 12%, rgba(71,71,71,0.85) 18%, rgba(10,10,10,0.85) 33%, rgba(0,0,0,0.85) 46%, rgba(0,0,0,0.85) 58%, rgba(0,0,0,0.85) 72%, rgba(71,71,71,0.85) 85%, rgba(102,102,102,0.85) 100%);
+background: -ms-linear-gradient(left, rgba(102,102,102,0.84) 0%, rgba(102,102,102,0.85) 0%, rgba(89,89,89,0.85) 12%, rgba(71,71,71,0.85) 18%, rgba(10,10,10,0.85) 33%, rgba(0,0,0,0.85) 46%, rgba(0,0,0,0.85) 58%, rgba(0,0,0,0.85) 72%, rgba(71,71,71,0.85) 85%, rgba(102,102,102,0.85) 100%);
+background: linear-gradient(to right, rgba(102,102,102,0.84) 0%, rgba(102,102,102,0.85) 0%, rgba(89,89,89,0.85) 12%, rgba(71,71,71,0.85) 18%, rgba(10,10,10,0.85) 33%, rgba(0,0,0,0.85) 46%, rgba(0,0,0,0.85) 58%, rgba(0,0,0,0.85) 72%, rgba(71,71,71,0.85) 85%, rgba(102,102,102,0.85) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#666666', endColorstr='#666666', GradientType=1 );
+
+ -webkit-box-shadow: 2px 1px 4px 3px #d1f8fa;
+box-shadow: 2px 1px 4px 3px #d1f8fa;
+  }
+
+  .video_form{
+    margin-left: 22%;
+      margin-right: 22%;
+
+  }
+
+</style>
+<% provide(:title, 'Home') %>
+
+<% if logged_in? %>
+
+
+<div class="row">
+<div class="video_upload">
+      <section class="user_info">
+        <%= render 'shared/user_info' %>
+      </section>
+      <section class="video_form">
+        <%= render 'shared/video_form' %>
+      </section>
+    </div>
+</div>
+<% else %>
+
+<body>
+  <br/>
+
+   <table align="center" valign="center">
+            <tr class="pulse" >
+                <td align="center" style="position: relative;">  <frontal> Im.Pulse </frontal>
+              <br/>
+                  <br/>
+                  <br/>
+                  <motto> Discover YOUR Beat. Follow YOUR Rhythm. </motto>
+                  <br/>
+                  <br/>
+                  <br/>
+                  <br/>
+                  <br/>
+                  <br/>
+                  <br/>
+                  <br/>
+                  <br/>
+                  <%= link_to "Sign up now!", signup_path, class: "btn-primary" %>
+                  <br/>
+                  <br/>
+                  <br/>
+                  <br/>
+                  <%= link_to "Log In", login_path, class: "btn-primary" %>
+              </td>
+           </tr>
+     </table>
+
+  <% end %>
+</body>

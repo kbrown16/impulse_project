@@ -1,0 +1,117 @@
+<style>
+  url{
+    text-align: center;
+  }
+
+  iframe{
+    height: 420px;
+    width: 600px;
+  }
+
+  .topblock{
+    font-size: 18px;
+    color: white;
+    text-shadow:
+       1px 1px 0 #006666,
+     -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+
+  }
+  .company{
+    text-align: center;
+    font-size: 10px;
+    color: white;
+  }
+
+  .upvote {
+
+
+
+  background: #ff8d1a;
+  background-image: -webkit-linear-gradient(top, #ff8d1a, #e67300);
+  background-image: -moz-linear-gradient(top, #ff8d1a, #e67300);
+  background-image: -ms-linear-gradient(top, #ff8d1a, #e67300);
+  background-image: -o-linear-gradient(top, #ff8d1a, #e67300);
+  background-image: linear-gradient(to bottom, #ff8d1a, #e67300);
+  -webkit-border-radius: 9;
+  -moz-border-radius: 9;
+  border-radius: 9px;
+   border: solid #ffffff 1px;
+  text-shadow: 1px 1px 2px #000000;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 7px 15px 7px 15px;
+  text-decoration: none;
+  }
+
+  .upvote:hover{
+    background: #e67300;
+  background-image: -webkit-linear-gradient(top, #e67300, #ff8d1a);
+  background-image: -moz-linear-gradient(top, #e67300, #ff8d1a);
+  background-image: -ms-linear-gradient(top, #e67300, #ff8d1a);
+  background-image: -o-linear-gradient(top, #e67300, #ff8d1a);
+  background-image: linear-gradient(to bottom, #e67300, #ff8d1a);
+  text-decoration: none;
+  }
+
+  .upvote:visited{
+    color: white;
+  }
+
+  .voting {
+    margin-left: 15%;
+    margin-right: 15%;
+    padding-top: 10px;
+
+  }
+
+ .voting table{
+    border-spacing: 10px;
+  }
+.divider{
+    width:5px;
+    height:auto;
+    display:inline-block;
+}
+
+</style>
+
+<li id="video-<%= video.id %>">
+
+  <url><%= video.youtube_html %></url>
+<br/>
+  <span class="company"> (C) <%= video.vrecord %></span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(video.created_at) %> ago by:<%= link_to video.user.username, video.user %></span>
+  <% if current_user?(video.user) %>
+    <%= link_to "Delete", video, method: :delete,
+                                       data: { confirm: "You sure?" } %>
+    <% end %>
+<br/>
+  <div class="voting">
+  <table align="center">
+
+<tr>
+  <td>
+  <%= link_to like_video_path(video), class: "upvote", method: :put do %>
+    <b>Upvote</b>
+  <%= video.get_upvotes.size %>
+    <% end %>
+  </td>
+  <td>
+<div class="divider"/>
+  </td>
+   <td>
+   <%= link_to dislike_video_path(video), class: "upvote", method: :put do %>
+  <b>Downvote</b>
+  <%= video.get_downvotes.size %>
+    <% end %>
+  </td>
+    </tr>
+  </table>
+    </div>
+
+</li>

@@ -1,0 +1,175 @@
+<style>
+
+  h1{
+    font-family: "Lucida Console";
+    color: white;
+    font-size: 35px !important;
+    font-style: bold;
+    text-align: center !important;
+    text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+  }
+
+   body{
+
+    background-image: url(/assets/stereo_equalizer.jpg);
+    background-position: center;
+    background-size: contain;
+    background-attachment: fixed;
+  }
+
+   videohead{
+     text-align: center;
+    color: white;
+    font-size: 28px;
+    text-shadow:
+       2px 3px 0 #006666,
+     -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+    line-height: 1.5;
+  }
+
+  .users{
+    float: clear;
+    text-align:center;
+  }
+
+  .user_info{
+
+  padding: 10px;
+  text-align: justify;
+  float: right;
+  margin-right: 2%;
+  width: 70%;
+
+
+    background: rgba(102,102,102,0.84);
+background: -moz-linear-gradient(left, rgba(102,102,102,0.84) 0%, rgba(102,102,102,0.85) 0%, rgba(89,89,89,0.85) 12%, rgba(71,71,71,0.85) 18%, rgba(10,10,10,0.85) 33%, rgba(0,0,0,0.85) 46%, rgba(0,0,0,0.85) 58%, rgba(0,0,0,0.85) 72%, rgba(71,71,71,0.85) 85%, rgba(102,102,102,0.85) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(102,102,102,0.84)), color-stop(0%, rgba(102,102,102,0.85)), color-stop(12%, rgba(89,89,89,0.85)), color-stop(18%, rgba(71,71,71,0.85)), color-stop(33%, rgba(10,10,10,0.85)), color-stop(46%, rgba(0,0,0,0.85)), color-stop(58%, rgba(0,0,0,0.85)), color-stop(72%, rgba(0,0,0,0.85)), color-stop(85%, rgba(71,71,71,0.85)), color-stop(100%, rgba(102,102,102,0.85)));
+background: -webkit-linear-gradient(left, rgba(102,102,102,0.84) 0%, rgba(102,102,102,0.85) 0%, rgba(89,89,89,0.85) 12%, rgba(71,71,71,0.85) 18%, rgba(10,10,10,0.85) 33%, rgba(0,0,0,0.85) 46%, rgba(0,0,0,0.85) 58%, rgba(0,0,0,0.85) 72%, rgba(71,71,71,0.85) 85%, rgba(102,102,102,0.85) 100%);
+background: -o-linear-gradient(left, rgba(102,102,102,0.84) 0%, rgba(102,102,102,0.85) 0%, rgba(89,89,89,0.85) 12%, rgba(71,71,71,0.85) 18%, rgba(10,10,10,0.85) 33%, rgba(0,0,0,0.85) 46%, rgba(0,0,0,0.85) 58%, rgba(0,0,0,0.85) 72%, rgba(71,71,71,0.85) 85%, rgba(102,102,102,0.85) 100%);
+background: -ms-linear-gradient(left, rgba(102,102,102,0.84) 0%, rgba(102,102,102,0.85) 0%, rgba(89,89,89,0.85) 12%, rgba(71,71,71,0.85) 18%, rgba(10,10,10,0.85) 33%, rgba(0,0,0,0.85) 46%, rgba(0,0,0,0.85) 58%, rgba(0,0,0,0.85) 72%, rgba(71,71,71,0.85) 85%, rgba(102,102,102,0.85) 100%);
+background: linear-gradient(to right, rgba(102,102,102,0.84) 0%, rgba(102,102,102,0.85) 0%, rgba(89,89,89,0.85) 12%, rgba(71,71,71,0.85) 18%, rgba(10,10,10,0.85) 33%, rgba(0,0,0,0.85) 46%, rgba(0,0,0,0.85) 58%, rgba(0,0,0,0.85) 72%, rgba(71,71,71,0.85) 85%, rgba(102,102,102,0.85) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#666666', endColorstr='#666666', GradientType=1 );
+
+  -webkit-box-shadow: 1px 1px 4px 3px #d1f8fa;
+box-shadow: 1px 1px 4px 3px #d1f8fa;
+  }
+
+  .search{
+    padding: 10px;
+    margin-bottom: 15px;
+    margin-left: 2%;
+    line-height: 1.5;
+
+    width: 20%;
+    float: left;
+
+  background: rgba(102,102,102,0.84);
+background: -moz-linear-gradient(left, rgba(102,102,102,0.84) 0%, rgba(102,102,102,0.85) 0%, rgba(89,89,89,0.85) 12%, rgba(71,71,71,0.85) 18%, rgba(10,10,10,0.85) 33%, rgba(0,0,0,0.85) 46%, rgba(0,0,0,0.85) 58%, rgba(0,0,0,0.85) 72%, rgba(71,71,71,0.85) 85%, rgba(102,102,102,0.85) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(102,102,102,0.84)), color-stop(0%, rgba(102,102,102,0.85)), color-stop(12%, rgba(89,89,89,0.85)), color-stop(18%, rgba(71,71,71,0.85)), color-stop(33%, rgba(10,10,10,0.85)), color-stop(46%, rgba(0,0,0,0.85)), color-stop(58%, rgba(0,0,0,0.85)), color-stop(72%, rgba(0,0,0,0.85)), color-stop(85%, rgba(71,71,71,0.85)), color-stop(100%, rgba(102,102,102,0.85)));
+background: -webkit-linear-gradient(left, rgba(102,102,102,0.84) 0%, rgba(102,102,102,0.85) 0%, rgba(89,89,89,0.85) 12%, rgba(71,71,71,0.85) 18%, rgba(10,10,10,0.85) 33%, rgba(0,0,0,0.85) 46%, rgba(0,0,0,0.85) 58%, rgba(0,0,0,0.85) 72%, rgba(71,71,71,0.85) 85%, rgba(102,102,102,0.85) 100%);
+background: -o-linear-gradient(left, rgba(102,102,102,0.84) 0%, rgba(102,102,102,0.85) 0%, rgba(89,89,89,0.85) 12%, rgba(71,71,71,0.85) 18%, rgba(10,10,10,0.85) 33%, rgba(0,0,0,0.85) 46%, rgba(0,0,0,0.85) 58%, rgba(0,0,0,0.85) 72%, rgba(71,71,71,0.85) 85%, rgba(102,102,102,0.85) 100%);
+background: -ms-linear-gradient(left, rgba(102,102,102,0.84) 0%, rgba(102,102,102,0.85) 0%, rgba(89,89,89,0.85) 12%, rgba(71,71,71,0.85) 18%, rgba(10,10,10,0.85) 33%, rgba(0,0,0,0.85) 46%, rgba(0,0,0,0.85) 58%, rgba(0,0,0,0.85) 72%, rgba(71,71,71,0.85) 85%, rgba(102,102,102,0.85) 100%);
+background: linear-gradient(to right, rgba(102,102,102,0.84) 0%, rgba(102,102,102,0.85) 0%, rgba(89,89,89,0.85) 12%, rgba(71,71,71,0.85) 18%, rgba(10,10,10,0.85) 33%, rgba(0,0,0,0.85) 46%, rgba(0,0,0,0.85) 58%, rgba(0,0,0,0.85) 72%, rgba(71,71,71,0.85) 85%, rgba(102,102,102,0.85) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#666666', endColorstr='#666666', GradientType=1 );
+
+   -webkit-box-shadow: 2px 1px 4px 3px #d1f8fa;
+box-shadow: 2px 1px 4px 3px #d1f8fa;
+
+  }
+
+  boxtitle{
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    text-shadow:
+       2px 3px 0 #006666,
+     -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+    line-height: 1.5;
+
+  }
+
+  .searchbutton{
+    background: #ff8d1a;
+  background-image: -webkit-linear-gradient(top, #ff8d1a, #e67300);
+  background-image: -moz-linear-gradient(top, #ff8d1a, #e67300);
+  background-image: -ms-linear-gradient(top, #ff8d1a, #e67300);
+  background-image: -o-linear-gradient(top, #ff8d1a, #e67300);
+  background-image: linear-gradient(to bottom, #ff8d1a, #e67300);
+  -webkit-border-radius: 9;
+  -moz-border-radius: 9;
+  border-radius: 9px;
+  text-shadow: 1px 1px 3px #000000;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 16px;
+  padding: 7px 40px 7px 40px;
+  border: solid #ffffff 2px;
+  text-decoration: none;
+  }
+
+  .searchbutton:hover{
+    background: #e67300;
+  background-image: -webkit-linear-gradient(top, #e67300, #ff8d1a);
+  background-image: -moz-linear-gradient(top, #e67300, #ff8d1a);
+  background-image: -ms-linear-gradient(top, #e67300, #ff8d1a);
+  background-image: -o-linear-gradient(top, #e67300, #ff8d1a);
+  background-image: linear-gradient(to bottom, #e67300, #ff8d1a);
+  text-decoration: none;
+  }
+
+  hr{
+    color: white;
+  }
+
+
+</style>
+
+<% provide(:title, 'Im.Pulse Members') %>
+<body>
+
+  <div class="backbox">
+<div class="row">
+
+<section class="search">
+  <%= form_tag(users_path, :method => "get", id: "search-form") do %>
+        <boxtitle text-align="center"> Search Here </boxtitle>
+  <%= text_field_tag :search, params[:search], placeholder: "Search Users" %>
+  <%= submit_tag "Search", class: "searchbutton" %>
+    <% end %>
+</section>
+
+
+
+ <section class="user_info" >
+    <ul class="users">
+     <videohead>Im.Pulse Community Members</videohead>
+      <hr>
+      <% if @users.present? %>
+      <%= render @users %>
+    </ul>
+       <% else %>
+    <p>There are no users containing the term(s) <%= params[:search] %>.</p>
+       <% end %>
+
+  </section>
+
+
+
+    </div>
+  </div>
+</body>
+
+
+
+

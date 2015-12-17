@@ -1,0 +1,107 @@
+<style>
+
+  body{
+
+    background-image: url(/assets/feed_background.png);
+    background-position: center;
+    background-size: contain;
+    background-attachment: fixed;
+
+  }
+
+.video_info{
+
+  padding: 10px;
+  margin-left: 15%;
+  margin-right: 15%;
+
+background: rgba(166,166,166,1);
+background: -moz-linear-gradient(left, rgba(166,166,166,1) 0%, rgba(166,166,166,0.8) 0%, rgba(89,89,89,0.8) 12%, rgba(71,71,71,0.8) 18%, rgba(10,10,10,0.8) 33%, rgba(0,0,0,0.8) 46%, rgba(0,0,0,0.8) 58%, rgba(0,0,0,0.8) 72%, rgba(71,71,71,0.8) 85%, rgba(166,166,166,0.8) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(166,166,166,1)), color-stop(0%, rgba(166,166,166,0.8)), color-stop(12%, rgba(89,89,89,0.8)), color-stop(18%, rgba(71,71,71,0.8)), color-stop(33%, rgba(10,10,10,0.8)), color-stop(46%, rgba(0,0,0,0.8)), color-stop(58%, rgba(0,0,0,0.8)), color-stop(72%, rgba(0,0,0,0.8)), color-stop(85%, rgba(71,71,71,0.8)), color-stop(100%, rgba(166,166,166,0.8)));
+background: -webkit-linear-gradient(left, rgba(166,166,166,1) 0%, rgba(166,166,166,0.8) 0%, rgba(89,89,89,0.8) 12%, rgba(71,71,71,0.8) 18%, rgba(10,10,10,0.8) 33%, rgba(0,0,0,0.8) 46%, rgba(0,0,0,0.8) 58%, rgba(0,0,0,0.8) 72%, rgba(71,71,71,0.8) 85%, rgba(166,166,166,0.8) 100%);
+background: -o-linear-gradient(left, rgba(166,166,166,1) 0%, rgba(166,166,166,0.8) 0%, rgba(89,89,89,0.8) 12%, rgba(71,71,71,0.8) 18%, rgba(10,10,10,0.8) 33%, rgba(0,0,0,0.8) 46%, rgba(0,0,0,0.8) 58%, rgba(0,0,0,0.8) 72%, rgba(71,71,71,0.8) 85%, rgba(166,166,166,0.8) 100%);
+background: -ms-linear-gradient(left, rgba(166,166,166,1) 0%, rgba(166,166,166,0.8) 0%, rgba(89,89,89,0.8) 12%, rgba(71,71,71,0.8) 18%, rgba(10,10,10,0.8) 33%, rgba(0,0,0,0.8) 46%, rgba(0,0,0,0.8) 58%, rgba(0,0,0,0.8) 72%, rgba(71,71,71,0.8) 85%, rgba(166,166,166,0.8) 100%);
+background: linear-gradient(to right, rgba(166,166,166,1) 0%, rgba(166,166,166,0.8) 0%, rgba(89,89,89,0.8) 12%, rgba(71,71,71,0.8) 18%, rgba(10,10,10,0.8) 33%, rgba(0,0,0,0.8) 46%, rgba(0,0,0,0.8) 58%, rgba(0,0,0,0.8) 72%, rgba(71,71,71,0.8) 85%, rgba(166,166,166,0.8) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6a6a6', endColorstr='#a6a6a6', GradientType=1 );
+
+    -webkit-box-shadow: 1px 1px 4px 3px #d1f8fa;
+box-shadow: 1px 1px 4px 3px #d1f8fa;
+
+}
+  usernamehead{
+    color: white;
+    font-size: 22px;
+    text-shadow:
+       1px 1px 0 #006666,
+     -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+  }
+
+  username{
+    color: black;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 1.5;
+  }
+
+   this{
+    color: white;
+    font-family: "Lucida Console";
+    font-size: 20px;
+    text-shadow:
+       1px 1px 0 #006666,
+     -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+  }
+  p{
+    color: black;
+    font-size: 16px;
+    font-family: "Arial";
+  }
+
+  hr{
+    color: black;
+  }
+  .uservids{
+    float: clear;
+    text-align:center;
+  }
+
+  videohead{
+     text-align: center;
+    color: white;
+    font-size: 35px;
+    text-shadow:
+       2px 3px 0 #006666,
+     -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+    line-height: 1.5;
+  }
+
+
+</style>
+
+<% provide(:title, 'Surge Feed') %>
+
+<body>
+
+  <section class="video_info" style="text-align:center;" >
+    <div class="uservids"  >
+    <videohead> Surge Feed </videohead>
+      <br/>
+      <%= will_paginate @videos %>
+     <br/> 
+      <ol class="videos" >
+        <%= render @videos %>
+      </ol>
+    <%= will_paginate @videos %>
+
+  </div>
+    </section>
+</body>
